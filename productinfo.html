@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KartMitra Product Info</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Hide product sections */
+        .product-section {
+            display: none;
+            padding: 30px;
+        }
+
+        /* Show selected product */
+        :target {
+            display: block;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .left-box {
+            max-width: 350px;
+        }
+
+        /* MAIN IMAGE BOX */
+        .main-image {
+            width: 350px;
+            height: 450px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* THUMBNAILS */
+        .thumbs img {
+            width: 75px;
+            border-radius: 8px;
+            margin-right: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .thumbs img:hover {
+            border-color: orange;
+        }
+
+        /* Right box */
+        .right-box {
+            max-width: 550px;
+        }
+
+        .price {
+            color: rgb(230, 47, 47);
+            font-size: 25px;
+        }
+
+        .strike {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        .off {
+            color: green;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .cart-btn {
+            background: orange;
+        }
+
+        .buy-btn {
+            background: rgb(230, 40, 40);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ⭐ PRODUCT 1 -->
+    <div class="product-section" id="p1">
+        <input type="radio" name="p1_img" id="p1_img1" checked>
+        <input type="radio" name="p1_img" id="p1_img2">
+        <input type="radio" name="p1_img" id="p1_img3">
+
+        <div class="container">
+            <div class="left-box">
+                <div class="main-image" id="p1_main_image"></div>
+                <style>
+                    #p1_img1:checked~.container .left-box #p1_main_image {
+                        background-image: url("lehanga.jpg");
+                    }
+
+                    #p1_img2:checked~.container .left-box #p1_main_image {
+                        background-image: url("lehanga1.jpg");
+                    }
+
+                    #p1_img3:checked~.container .left-box #p1_main_image {
+                        background-image: url("lehanga2.jpg");
+                    }
+                </style>
+
+                <div class="thumbs">
+                    <label for="p1_img1"><img src="lehanga.jpg"></label>
+                    <label for="p1_img2"><img src="lehanga1.jpg"></label>
+                    <label for="p1_img3"><img src="lehanga2.jpg"></label>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <h2>Crushed Silk Wine Lehenga Choli with Sequined Embroidery</h2>
+                <p class="price">₹1999 <span class="strike">₹4999</span> <span class="off">61% off</span></p>
+                <h3>Product Details</h3>
+                <ul>
+                    <li>Fabric: Shaded Lycra</li>
+                    <li>Blouse Fabric: Lycra</li>
+                    <li>Flare: 3 mtr</li>
+                    <li>Type: Stitched Lehenga + Unstitched Blouse</li>
+                </ul>
+                <button class="btn cart-btn">Add to Cart</button>
+                <button class="btn buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- ⭐ PRODUCT 2 -->
+    <div class="product-section" id="p2">
+        <input type="radio" name="p2_img" id="p2_img1" checked>
+        <input type="radio" name="p2_img" id="p2_img2">
+        <input type="radio" name="p2_img" id="p2_img3">
+        <div class="container">
+            <div class="left-box">
+                <div class="main-image" id="p2_main_image"></div>
+                <style>
+                    #p2_img1:checked~.container .left-box #p2_main_image {
+                        background-image: url("kurti1.jpg");
+                    }
+                    #p2_img2:checked~.container .left-box #p2_main_image {
+                        background-image: url("kurti2.jpg");
+                    }
+                    #p2_img3:checked~.container .left-box #p2_main_image {
+                        background-image: url("kurti3.jpg");
+                    }
+                </style>
+                <div class="thumbs">
+                    <label for="p2_img1"><img src="kurti1.jpg"></label>
+                    <label for="p2_img2"><img src="kurti2.jpg"></label>
+                    <label for="p2_img3"><img src="kurti3.jpg"></label>
+                </div>
+            </div>
+            <div class="right-box">
+                <h2>Bellnow Women's Stylish Floral Printed Short Kurti/Top</h2>
+                <p class="price">₹289 <span class="strike">₹999</span> <span class="off">61% off</span></p>
+
+                <h3>Product Details</h3>
+                <ul>
+                    <li>Fabric: Rayon</li>
+                    <li>Color: red</li>
+                    <li>Type: Floral Kurti</li>
+                </ul>
+                <button class="btn cart-btn">Add to Cart</button>
+                <button class="btn buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- ⭐ PRODUCT 3 -->
+    <div class="product-section" id="p3">
+        <input type="radio" name="p3_img" id="p3_img1" checked>
+        <input type="radio" name="p3_img" id="p3_img2">
+        <input type="radio" name="p3_img" id="p3_img3">
+        <div class="container">
+            <div class="left-box">
+                <div class="main-image" id="p3_main_image"></div>
+                <style>
+                    #p3_img1:checked~.container .left-box #p3_main_image {
+                        background-image: url("jhumka.jpg");
+                    }
+                    #p3_img2:checked~.container .left-box #p3_main_image {
+                        background-image: url("jhumka2.jpg");
+                    }
+                    #p3_img3:checked~.container .left-box #p3_main_image {
+                        background-image: url("jhumka3.jpg");
+                    }
+                </style>
+                <div class="thumbs">
+                    <label for="p3_img1"><img src="jhumka.jpg"></label>
+                    <label for="p3_img2"><img src="jhumka2.jpg"></label>
+                    <label for="p3_img3"><img src="jhumka3.jpg"></label>
+                </div>
+            </div>
+            <div class="right-box">
+                <h2>18K Gold-Plated Kundan Studded Jhumkas</h2>
+                <p class="price">₹890 <span class="strike">₹3299</span> <span class="off">61% off</span></p>
+                <h3>Product Details</h3>
+                <ul>
+                    <li>Material: Brass & Kundan</li>
+                    <li>Plating: 18K Gold</li>
+                    <li>Style: Traditional Jhumkas</li>
+                </ul>
+                <button class="btn cart-btn">Add to Cart</button>
+                <button class="btn buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
